@@ -19,9 +19,9 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/inte-srh" component={ Homepage } />
-          <Route exact path="/404" component={ PageNotFound } />
-          <Redirect to="/404"/>
+          <Route exact path="/" component={ Homepage } />
+          <Route path="/404" component={ PageNotFound } />
+          <Redirect to="/404" />
         </Switch>
       </Router>
     );
