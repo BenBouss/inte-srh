@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Maj from '../data/maj.json'
 
 class MajHome extends Component {
@@ -7,7 +8,7 @@ class MajHome extends Component {
             <div className="lastMaj col-xl-6">
                 <div className="majTitle">
                     <h2>Les dernières mises à jour</h2>
-                    <button>Voir tout</button>
+                    <button><Link to="/mises-a-jour">Voir tout</Link></button>
                 </div>
                 <div className="whiteBlock">
                     <ul className="listMaj">

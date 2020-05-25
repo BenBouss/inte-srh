@@ -1,37 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import logoTissot from '../assets/logo-tissot.png'
 import Header from '../components/Header'
 import ThemsHome from '../components/ThemHome'
 import MajHome from '../components/MajHome'
 import ModHome from '../components/ModHome'
+import SidebarGlobale from '../components/SidebarGlobale'
 
 const Homepage = () => {
     return (
         <div>
-            <div className="sidebar">
-                <div className="sidebarHeader">
-                    <img src={logoTissot} alt="Edition Tissot" />
-                    <span className="appType">Documentation</span>
-                </div>
-                <div className="sidebarMenu">
-                    <ul className="menuNav">
-                        <li className="menuHome menuActif"><a href="">Accueil</a></li>
-                        <li className="menuModeles"><a href="">Modèles téléchargeables</a></li>
-                        <li className="menuMaj"><a href="">Mises à jour</a></li>
-                        <li className="menuFav"><a href="">Mes favoris</a></li>
-                    </ul>
-                </div>
-                <div className="sidebarAccount">
-                    <span className="accountIcon">J</span>
-                    <span>johndoe@mail.com</span>
-                </div>
-            </div>
+            <Header />
+            <SidebarGlobale />
             <div className="appMain">
-                <div className="mainInner">
-                    <Header />
-                    <main className="mainContent col-xxl-10">
+                <div className="mainInner row">
+                    <main className="mainContent col-xxl-9">
                         <div className="row">
                             <div className="col-xs-12">
                                 <div className="heading-1 whiteBlock">

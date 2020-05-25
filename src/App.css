@@ -13,33 +13,27 @@
 /* -------------
 Table of content
 ----------------
-# Flexboxgrid 2 customization
-
 # Global
 
+# Header
+  ## Nav
+  ## Searchbox
+
 # Sidebar
-  ## Sidebar header
   ## Menu
   ## Infos Account
 
 # App Main
-  ## Header
------------- */
 
-/* # Flexboxgrid 2 customization */
-.container-fluid {
-    padding-right: 0;
-    padding-left: 0;
-}
-.col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-offset-0, .col-xs-offset-1, .col-xs-offset-2, .col-xs-offset-3, .col-xs-offset-4, .col-xs-offset-5, .col-xs-offset-6, .col-xs-offset-7, .col-xs-offset-8, .col-xs-offset-9, .col-xs-offset-10, .col-xs-offset-11, .col-xs-offset-12, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-offset-0, .col-sm-offset-1, .col-sm-offset-2, .col-sm-offset-3, .col-sm-offset-4, .col-sm-offset-5, .col-sm-offset-6, .col-sm-offset-7, .col-sm-offset-8, .col-sm-offset-9, .col-sm-offset-10, .col-sm-offset-11, .col-sm-offset-12, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md-offset-0, .col-md-offset-1, .col-md-offset-2, .col-md-offset-3, .col-md-offset-4, .col-md-offset-5, .col-md-offset-6, .col-md-offset-7, .col-md-offset-8, .col-md-offset-9, .col-md-offset-10, .col-md-offset-11, .col-md-offset-12, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-offset-0, .col-lg-offset-1, .col-lg-offset-2, .col-lg-offset-3, .col-lg-offset-4, .col-lg-offset-5, .col-lg-offset-6, .col-lg-offset-7, .col-lg-offset-8, .col-lg-offset-9, .col-lg-offset-10, .col-lg-offset-11, .col-lg-offset-12, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-offset-0, .col-xl-offset-1, .col-xl-offset-2, .col-xl-offset-3, .col-xl-offset-4, .col-xl-offset-5, .col-xl-offset-6, .col-xl-offset-7, .col-xl-offset-8, .col-xl-offset-9, .col-xl-offset-10, .col-xl-offset-11, .col-xl-offset-12 {
-    padding-right: 12px;
-    padding-left: 12px;
-}
+# Documentation
+
+------------ */
 
 /* # Global */
 :root {
-  --rh-main-color: #E53E3E;
-  --rh-light-color: #FED7D7;
+  --red-200-color: #FED7D7;
+  --red-600-color: #E53E3E;
+  --grey-100-color: #F7FAFC;
 }
 *, *:before, *:after {
   box-sizing: border-box;
@@ -67,6 +61,10 @@ h2, .heading-2 {
   font-size: 1.5rem;
   font-weight: 700;
 }
+h3, .heading-3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
 p {
   margin: 0 0 1.5rem 0;
   line-height: 1.25rem;
@@ -92,7 +90,7 @@ ul {
   padding: 1.5rem;
   background-color: #fff;
   border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(41,76,135, 0.15);
+  box-shadow: 0 4px 10px rgba(160, 174, 192, 0.15);
 }
 button {
   padding: .25rem .75rem;
@@ -104,20 +102,20 @@ button {
   padding: 2.25rem;
 }
 
-/* # Sidebar */
-.sidebar {
+/* # Header */
+.mainHeader {
   display: flex;
-  width: 360px;
-  height: 100vh;
-  padding: 0 1.5rem 0 2rem;
-  flex-direction: column;
+  width: 100%;
+  height: 70px;
+  padding-left: 2rem;
+  padding-right: 3rem;
+  align-items: center;
   position: fixed;
   top: 0;
-  left: 0;
-  z-index: 9999;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 160px 0 10px rgba(160, 174, 192, 0.1);
 }
-
-/* ## Sidebar header */
 .sidebarHeader {
   display: flex;
   padding: .375rem 0;
@@ -134,25 +132,31 @@ button {
   background-color: #D5D5D5;
   border-radius: 5px;
 }
-
-/* ## Menu */
-.sidebarMenu {
-  margin: auto 0;
+/* ## Nav */
+.mainHeader nav {
+  margin-left: 3rem;
+}
+.menuNav {
+  display: flex;
+  align-items: center;
 }
 .menuNav li a {
   display: flex;
-  margin-bottom: 1rem;
+  margin-right: 1rem;
   padding: .5rem;
+  font-size: .875rem;
   align-items: center;
+}
+.menuNav li a:hover {
+  color: var(--red-600-color);
 }
 .menuNav li:nth-last-child {
   margin-bottom: 0;
 }
 .menuNav li a:before {
   margin-right: 1rem;
-  padding: .75rem;
   font-family: 'documentation-ico';
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 .menuNav li.menuHome a:before {
@@ -167,22 +171,65 @@ button {
 .menuNav li.menuFav a:before {
   content: '\e902';
 }
-.menuNav li.menuActif a {
+.menuNav li a.active {
   font-weight: 600;
-  background-color: var(--rh-light-color);
-  border-radius: 10px;
+  color: var(--red-600-color);
 }
-.menuNav li.menuActif:after {
-  content: '';
-  width: 3px;
-  height: 10px;
-  background-color: #000;
+
+/* ## Searchbox */
+.searchBox {
+  width: 25%;
+  margin-left: auto;
+  padding-right: 0;
+}
+.searchBox form {
+  display: flex;
+  border-radius: 20px;
+  background-color: var(--grey-100-color);
+}
+.searchBox form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: transparent;
+}
+.searchBox form input:focus {
+  outline: none;
+}
+.searchBox form button {
+  display: flex;
+  width: 2.875rem;
+  height: 2.875rem;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+}
+.searchBox form button:before {
+  content: '\e904';
+  font-family: 'documentation-ico';
+  font-size: 1.25rem;
+  color: var(--red-600-color);
+}
+
+/* # Sidebar */
+.sidebar {
+  display: flex;
+  width: 7.25rem;
+  height: calc(100vh - 70px);
+  padding: 0 1.5rem 0 2rem;
+  flex-direction: column;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  z-index: 9999;
 }
 
 /* ## Infos Account */
 .sidebarAccount {
   display: flex;
-  margin-bottom: 1.5rem;
+  margin: auto 0 1.5rem 0;
   padding: 2rem;
   align-items: center;
 }
@@ -196,7 +243,7 @@ button {
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
-  background-color: var(--rh-main-color);
+  background-color: var(--red-600-color);
   color: #fff;
   border-radius: 50%;
   font-weight: 700;
@@ -206,72 +253,25 @@ button {
 
 /* # App Main */
 .appMain {
-  margin-left: 360px;
+  margin-left: 7.25rem;
 }
-.mainInner {
+.mainInner.row {
   margin: 70px 0 2rem;
   padding: 2.25rem;
-  background-color: #f7f7fa;
+  background-color: var(--grey-100-color);
   border-radius: 2rem 0 0 2rem;
-  box-shadow: 0 0 10px rgba(41,76,135, 0.15) inset;
-}
-/* ## Header */
-.mainHeader {
-  display: flex;
-  width: calc(100% - 360px);
-  height: 70px;
-  padding-left: 1.5rem;
-  padding-right: 2rem;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #fff;
-  box-shadow: 30px 0px 10px 0px rgba(41,76,135, 0.15);
-}
-.searchBox {
-  margin-left: auto;
-  padding-right: 0;
-}
-.searchBox form {
-  display: flex;
-  border-radius: 20px;
-  background-color: #f7f7fa;
-}
-.searchBox form input {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border: none;
-  background-color: transparent;
-}
-.searchBox form input:focus {
-  outline: none;
-}
-.searchBox form button {
-  padding: 0 1rem;
-  border: none;
-  background: none;
-}
-.searchBox form button:before {
-  content: '\e904';
-  font-family: 'documentation-ico';
-  font-size: 1.25rem;
-  color: var(--rh-main-color);
+  box-shadow: 0 0 10px rgba(160, 174, 192, 0.15) inset;
 }
 
 /* ## MainContent */
-.mainContent {
-  padding: 0;
-}
-.themes h2, .lastMaj h2, .indexMod h2 {
+.themes h2, .lastMaj h2, .indexMod h2, .themes .row h2 {
   margin-bottom: 1rem;
   padding-left: 1rem;
 }
 
 /* ## Thèmes */
 .themes .whiteBlock {
-  min-height: 190px;
+  min-height: 11.875rem;
   margin-bottom: 1.5rem;
 }
 .themInfo {
@@ -292,9 +292,18 @@ button {
 }
 .majTitle button, .modTitle button {
   margin: 0 0 1rem auto;
-  border: 1px solid var(--rh-main-color);
+  border: 1px solid var(--red-600-color);
   background-color: #fff;
-  color: var(--rh-main-color);
+  cursor: pointer;
+}
+.majTitle button a , .modTitle button a {
+  color: var(--red-600-color);
+}
+.majTitle button:hover, .modTitle button:hover {
+  background-color: var(--red-600-color);
+}
+.majTitle button:hover a , .modTitle button:hover a {
+  color: #fff;
 }
 
 /* List UC */
@@ -320,30 +329,45 @@ li.itemUC:last-child {
 }
 .refInternet {
   font-size: .75rem;
-  color: var(--rh-main-color);
+  color: var(--red-600-color);
 }
 
-/* Responsive */
+/* # Documentation */
+.mainHeader {
+  box-shadow: 395px 0 10px rgba(160, 174, 192, 0.1);
+}
+.documentation .sidebar {
+  width: 22.5rem;
+}
+.documentation .appMain {
+  margin-left: 22.5rem;
+}
+.documentation.themes .row .whiteBlock {
+  margin-bottom: 0;
+}
+
+/* # Responsive */
 @media only screen and (max-width: 992px) {
 .sidebar {
-  width: 114px;
+  width: 7.125rem;
   padding: 0 1.5rem;
   overflow: hidden;
 }
-.appType {
-  display: none;
-}
-.menuNav {
-  width: 66px;
-  overflow: hidden;
-}
 .appMain {
-  margin-left: 114px;
-}
-.mainHeader {
-  width: calc(100% - 114px);
+  margin-left: 7.125rem;
 }
 }
+@media only screen and (max-width: 1199px) {
+  .searchBox {
+    width: 2.875rem;
+  }
+  .searchBox form {
+    border-radius: 50%;
+  }
+  .searchBox form input {
+    display: none;
+  }
+  }
 
 /* Animation / Transitions */
 .sidebar {
@@ -351,4 +375,19 @@ li.itemUC:last-child {
 }
 .appMain {
   transition: margin-left ease .3s;
+}
+
+/* Temp */
+.sidebarAccount {
+  margin: auto auto 1.5rem auto;
+  padding: 2rem 0;
+}
+.sidebarAccount span:last-child {
+  display: none;
+}
+.sidebarAccount:after {
+  display: none;
+}
+.accountIcon {
+  margin: 0;
 }

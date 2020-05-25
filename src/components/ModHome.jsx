@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Modele from '../data/maj.json'
 
 class ModHome extends Component {
@@ -7,7 +8,7 @@ class ModHome extends Component {
             <div className="indexMod col-xl-6">
                 <div className="modTitle">
                     <h2>Index des modèles</h2>
-                    <button>Voir tout</button>
+                    <button><Link to="/modeles">Voir tout</Link></button>
                 </div>
                 <div className="whiteBlock">
                     <ul className="listMaj">

@@ -1,0 +1,55 @@
+[
+    {
+        "Thematique": "Recrutement et embauche",
+        "Chapitre": [
+            {
+                "ChapTitre": "Recrutement",
+                "UC": [
+                    {
+                        "UCTitre": "Réagir à un besoin de recrutement dans l’urgence ",
+                        "UCRef": "SRH.01.1.010"
+                    },
+                    {
+                        "UCTitre": "Comment vérifier les références indiquées par un candidat à l'embauche ?",
+                        "UCRef": "SRH.01.1.020"
+                    },
+                    {
+                        "UCTitre": "Rompre une promesse d’embauche ",
+                        "UCRef": "SRH.01.1.030"
+                    },
+                    {
+                        "UCTitre": "Comment réagir si un salarié rompt son contrat de travail juste avant son démarrage ?",
+                        "UCRef": "SRH.01.1.040"
+                    }
+                ]
+            },
+            {
+                "ChapTitre": "Embauche",
+                "UC": [
+                    {
+                        "UCTitre": "Un salarié ne se présente pas au premier jour de son embauche",
+                        "UCRef": "SRH.01.2.010"
+                    },
+                    {
+                        "UCTitre": "Que faire si un salarié a menti sur son CV ?",
+                        "UCRef": "SRH.01.2.020"
+                    },
+                    {
+                        "UCTitre": "Que faire si un salarié n'a pas/plus de titre de séjour ?",
+                        "UCRef": "SRH.01.2.030"
+                    },
+                    {
+                        "UCTitre": "Que faire si un salarié perd la certification requise pour exercer son métier ?",
+                        "UCRef": "SRH.01.2.040"
+                    },
+                    {
+                        "UCTitre": "Que faire si un salarié tombe malade pendant sa période d'essai ?",
+                        "UCRef": "SRH.01.2.050"
+                    }
+                ]
+            }
+        ],
+        "NbUC" : 9,
+        "ThemIcon" : "assets/thems-illustration/recrutement.svg"
+    }
+]
