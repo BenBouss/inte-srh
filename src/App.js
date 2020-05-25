@@ -21,7 +21,6 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={ Homepage } />
           <Route path="/404" component={ PageNotFound } />
-          <Redirect to="/404" />
         </Switch>
       </Router>
     );
