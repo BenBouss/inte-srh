@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e2138b0184125f50e6b5ebcf9ac8b8bf",
+    "revision": "d391bc9c5236c789ed771b167dd0da65",
     "url": "/inte-srh/index.html"
   },
   {
-    "revision": "61ffc6d98f62ec483799",
-    "url": "/inte-srh/static/css/main.1529f6bd.chunk.css"
+    "revision": "24aa12bfebabbde5e98a",
+    "url": "/inte-srh/static/css/main.70c27bbe.chunk.css"
   },
   {
-    "revision": "81e7f66a40ec8e91db22",
-    "url": "/inte-srh/static/js/2.c4d0a322.chunk.js"
+    "revision": "cecd3f1b0f484ff397f3",
+    "url": "/inte-srh/static/js/2.fd62b4d9.chunk.js"
   },
   {
     "revision": "be14b386ccc34a49dee76740150eacbc",
-    "url": "/inte-srh/static/js/2.c4d0a322.chunk.js.LICENSE.txt"
+    "url": "/inte-srh/static/js/2.fd62b4d9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "61ffc6d98f62ec483799",
-    "url": "/inte-srh/static/js/main.ed45990c.chunk.js"
+    "revision": "24aa12bfebabbde5e98a",
+    "url": "/inte-srh/static/js/main.f4732f56.chunk.js"
   },
   {
     "revision": "6879b082f5c7e8090336",
     "url": "/inte-srh/static/js/runtime-main.397dfc33.js"
+  },
+  {
+    "revision": "e9c5b94a49ba272c0da736ae2896b483",
+    "url": "/inte-srh/static/media/book.e9c5b94a.svg"
   },
   {
     "revision": "4c3a69805f4590aa75c2c85c89d49728",
