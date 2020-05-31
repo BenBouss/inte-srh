@@ -1,10 +1,21 @@
-import React from 'react'
-import AccountComp from './AccountComp'
+import React, { Component } from 'react'
+import ThemsList from './ThemsList'
+import Account from './Account'
 
-const SidebarGlobale = () => (
-    <div className="sidebar">
-        <AccountComp />
-    </div>
-);
+class SidebarNv0 extends Component {
+    render(){
+        return(
+            <div className="sidebar">
+                <div className="sidebarMenu">
+                    <div className="heading-3">Sommaire</div>
+                    <nav>
+                        <ThemsList />
+                    </nav>
+                </div>
+                <Account />
+            </div>
+        );
+    }
+}
 
-export default SidebarGlobale;
+export default SidebarNv0;

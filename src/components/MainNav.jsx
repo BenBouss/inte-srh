@@ -4,12 +4,14 @@ import { NavLink } from 'react-router-dom'
 class MainNav extends Component {
     render() {
         return (
-            <nav>
-                <ul className="menuNav">
-                    <li className="menuHome"><NavLink exact to="/">Accueil</NavLink></li>
-                    <li className="menuModeles"><NavLink to="/modeles">Index des modèles</NavLink></li>
-                    <li className="menuMaj"><NavLink to="/mises-a-jour">Mises à jour</NavLink></li>
-                    <li className="menuFav"><NavLink to="/favoris">Mes favoris</NavLink></li>
+            <nav className="mainNav">
+                <ul className="flex-items-center">
+                    <li className="menuHome">
+                        <NavLink exact to="/" className="flex-items-center">Accueil</NavLink>
+                    </li>
+                    <li className="menuModeles">
+                        <NavLink to="/modeles" className="flex-items-center">Index des modèles</NavLink>
+                        </li>
                 </ul>
             </nav>
         );

@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import SidebarThem from '../components/SidebarThem'
 import Sommaire from '../data/sommaire.json'
 
-const Recrutement = (props) => {
+const Recrutement = () => {
     return (
         <div className="documentation themes">
             <Header />

@@ -50,7 +50,8 @@
             }
         ],
         "NbUC" : 9,
-        "ThemIcon" : "assets/thems-illustration/recrutement.svg"
+        "ThemIcon" : "assets/thems-illustration/recrutement.svg",
+        "Path": "recrutement-embauche"
     },
     {
         "Thematique": "Temps de travail, absences, congés",
@@ -107,7 +108,8 @@
             }
         ],
         "NbUC" : 10,
-        "ThemIcon" : "assets/thems-illustration/temps-de-travail.svg"
+        "ThemIcon" : "assets/thems-illustration/temps-de-travail.svg",
+        "Path": "temps-de-travail"
     },
     {
         "Thematique": "Evolution de carrière",
@@ -141,7 +143,8 @@
         ]
         ,
         "NbUC" : 4,
-        "ThemIcon" : "assets/thems-illustration/evolution-carriere.svg"
+        "ThemIcon" : "assets/thems-illustration/evolution-carriere.svg",
+        "Path": "evolution-carriere"
     },
     {
         "Thematique": "Discipline / execution du contrat",
@@ -231,7 +234,8 @@
         ]
         ,
         "NbUC" : 18,
-        "ThemIcon" : "assets/thems-illustration/discipline.svg"
+        "ThemIcon" : "assets/thems-illustration/discipline.svg",
+        "Path": "discipline-execution-contrat"
     },
     {
         "Thematique": "Relations collectives",
@@ -277,7 +281,8 @@
         ]
         ,
         "NbUC" : 7,
-        "ThemIcon" : "assets/thems-illustration/relations-collectives.svg"
+        "ThemIcon" : "assets/thems-illustration/relations-collectives.svg",
+        "Path": "relations-collectives"
     },
     {
         "Thematique": "Santé et sécurité des salariés",
@@ -335,7 +340,8 @@
         ]
         ,
         "NbUC" : 10,
-        "ThemIcon" : "assets/thems-illustration/sante-securite.svg"
+        "ThemIcon" : "assets/thems-illustration/sante-securite.svg",
+        "Path": "sante-securite"
     },
     {
         "Thematique": "Management et motivation",
@@ -377,7 +383,8 @@
         ]
         ,
         "NbUC" : 6,
-        "ThemIcon" : "assets/thems-illustration/management-motivation.svg"
+        "ThemIcon" : "assets/thems-illustration/management-motivation.svg",
+        "Path": "management-motivation"
     },
     {
         "Thematique": "Départ du salarié",
@@ -440,6 +447,7 @@
         ]
         ,
         "NbUC" : 10,
-        "ThemIcon" : "assets/thems-illustration/depart-salarie.svg"
+        "ThemIcon" : "assets/thems-illustration/depart-salarie.svg",
+        "Path": "depart-salarie"
     }
 ]
