@@ -11,7 +11,7 @@ class MainNav extends Component {
                     </li>
                     <li className="menuModeles">
                         <NavLink to="/modeles" className="flex-items-center">Index des modèles</NavLink>
-                        </li>
+                    </li>
                 </ul>
             </nav>
         );

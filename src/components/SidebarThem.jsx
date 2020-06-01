@@ -13,8 +13,24 @@ class SidebarThem extends Component {
     toggle = () => this.setState((currentState) => ({show: !currentState.show}));
     render() {
         return(
-            <div className="sidebar summary">
-                <div className="heading-2">Sommaire
+            <div className="sidebar">
+                <div className="heading-3">Sommaire</div>
+                <div className="currentThem flex-items-center">
+                    <img className="logoThem" src={require(`../${this.props.them.ThemIcon}`)} alt={this.props.them.Thematique}  />
+                    <div>{this.props.them.Thematique}</div>
+                </div>
+                <nav className="navChap">
+                    <ul>
+                        {this.props.them.Chapitre.map((chap, i) =>
+                            <li key={i}>
+                                <Link to={`/theme/${this.props.them.Path}`}>{chap.ChapTitre}</Link>
+                            </li>
+                        )}
+                    </ul>
+                </nav>
+                <Account />
+            {/* <div className="sidebar summary">
+                <div className="heading-3">Sommaire
                 {this.state.show && <div className="closeButton" onClick={this.toggle}></div>}
                 </div>
                 {this.state.show ? null :
@@ -43,6 +59,7 @@ class SidebarThem extends Component {
                     </nav>
                 }
                 <Account />
+            </div> */}
             </div>
         );
     }

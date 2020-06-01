@@ -10,7 +10,7 @@ const ThemesBlock = () => {
             </div>
             {Sommaire.map((them, i) => 
             <div className="col-xs-12 col-md-6 col-xl-4 col-xxl-3" key={i}>
-                <Link to={`/theme/${them.Path}`} className="themInfo whiteBlock" key={i}>
+                <Link to={`/theme/${them.Path}`} className="themInfo borderBlock" key={i}>
                     <img className="logoThem" src={require(`../${them.ThemIcon}`)} alt={them.Thematique}  />
                     <h3>{them.Thematique}</h3>
                     <div className="nbUC">{them.NbUC +" Documents"}</div>

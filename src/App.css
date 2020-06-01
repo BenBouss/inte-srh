@@ -30,13 +30,14 @@ Table of content
 
 /* # Global */
 :root {
- --text-main-color: #2d3748;
- --text-second-color: #fff;
+ --text-main-color: #1A202C; /* Gray 900 */
+ --text-second-color: #fff; /* Blanc */
+ --text-third-color: #4A5568; /* Gray 700 */
  
- --bg-main1-color: #fff;
- --bg-main2-color: #edf2f7;
+ --bg-main1-color: #fff; /* Blanc */
+ --bg-main2-color: #edf2f7; /* Gray 200 */
 
- --text-main-doc-color: #e53e3e;
+ --main-doc-color: #0096e6; /* Couleur de la doc */
 }
 *, *:before, *:after {
   box-sizing: border-box;
@@ -115,6 +116,9 @@ button {
   padding: .25rem .75rem;
   font-weight: 400;
   font-size: .75rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 /* # Header */
@@ -122,15 +126,15 @@ button {
   display: flex;
   width: 100%;
   height: 70px;
-  padding: 0 2.25rem;
   align-items: center;
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 9999;
 }
 .sidebarHeader {
-  width: 21.75rem;
-  padding: .375rem 0;
+  width: 23.75rem;
+  padding: .375rem 0 .375rem 2.25rem;
 }
 .sidebarHeader img {
   height: 58px;
@@ -148,7 +152,7 @@ button {
   padding: .5rem .875rem;
   font-size: .875rem;
 }
-.mainNav li:last-child a {
+.mainNav li:last-child a  {
   margin-right: 0;
 }
 .mainNav li a:before {
@@ -157,18 +161,19 @@ button {
   font-size: 1rem;
   font-weight: 400;
 }
-.mainNav li.menuHome a:before {
+li.menuHome a:before {
   content: '\e901';
 }
-.mainNav li.menuModeles a:before {
+li.menuModeles a:before {
   content: '\e900';
 }
 
 /* ## Searchbox */
 .searchBox {
-  width: 25%;
+  width: 100%;
+  max-width: 400px;
   margin-left: auto;
-  padding-right: 0;
+  padding-right: 2.25rem;
 }
 .searchBox form input {
   width: 100%;
@@ -207,31 +212,26 @@ button {
   left: 0;
   z-index: 9999;
 }
-.sidebarMenu {
-  padding-left: 1rem;
-}
-.themsList .logoThem {
+.themsList .logoThem, .currentThem .logoThem {
   width: 1.5rem;
   margin-right: 1rem;
 }
 
 /* ## Account */
 .account {
-  margin: auto 0 1.5rem 0;
-  padding: 2rem;
+  margin: auto 2rem 2rem 0;
+  padding: 1.25rem;
 }
-.account:after {
+.accountMail {
+  word-break: break-all;
+}
+.account .accountOuter:after {
   content: '\e905';
   margin-left: auto;
   font-family: 'documentation-ico';
 }
-.accountIcon {
-  width: 2rem;
-  height: 2rem;
-  margin-right: 1rem;
-  font-weight: 700;
-  text-align: center;
-  line-height: 2rem;
+.account.Open .accountOuter:after {
+  content: '\e906';
 }
 
 /* # App Main */
@@ -241,7 +241,7 @@ button {
 .mainInner.row {
   min-height: calc(100vh - 70px - 2rem);
   margin: 70px 0 2rem;
-  padding: 3rem 2.25rem;
+  padding: 3rem 1.5rem;
 }
 
 /* ## Thèmes */
@@ -255,6 +255,7 @@ button {
 }
 .nbUC {
   margin-top: auto;
+  color: var(--text-third-color);
 }
 
 /* # UC list */
@@ -284,16 +285,42 @@ body {
   color: var(--text-main-color);
 }
 a:hover {
-  color: var(--text-main-doc-color);
+  color: var(--main-doc-color);
 }
 a.active {
   font-weight: 700;
-  color: var(--text-main-doc-color);
+  color: var(--main-doc-color);
 }
 .borderBlock {
+  margin-bottom: 1.5rem;
   padding: 1.5rem;
   border: 1px solid var(--bg-main2-color);
   border-radius: 1rem;
+}
+.seeAll {
+  margin: 0 0 .875rem auto;
+  padding: 0;
+}
+.seeAll a {
+  display: block;
+  padding: .25rem .75rem;
+  color: var(--main-doc-color);
+  border-radius: .375rem;
+  border: 1px solid var(--main-doc-color);
+}
+.seeAll:hover a {
+  color: var(--text-second-color);
+  background-color: var(--main-doc-color);
+}
+.summaryButton {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.summaryButton:before {
+  content: "\e907";
+  font-family: "documentation-ico";
+  font-size: 2rem;
 }
 
 /* ## Header */
@@ -314,13 +341,13 @@ a.active {
 .mainNav a.active:after {
   content: '';
   display: block;
-  width: .25rem;
-  height: .25rem;
+  width: 100%;
+  height: .125rem;
   position: absolute;
-  bottom: -.25rem;
-  border-radius: 50%;
-  left: calc(50% - .25rem/2);
-  background-color: var(--text-main-doc-color);
+  bottom: -1.125rem;
+  left: 0;
+  background-color: var(--main-doc-color);
+  border-radius: .25rem .25rem 0 0;
 }
 .searchBox form {
   position: relative;
@@ -341,29 +368,249 @@ a.active {
   top: 0;
   right: 0;
   bottom: 0;
-  color: var(--text-main-doc-color);
+  color: var(--main-doc-color);
 }
 
 /* ## Sidebar */
 .sidebar {
-  background-color: var(--bg-main2-color);
+  border-right: 1px solid var(--bg-main2-color);
+}
+.sidebarMenu {
+  overflow: hidden;
+}
+.sidebarMenu nav {
+  height: calc(100% - 2.625rem);
+  overflow-y: auto;
 }
 .themsList li {
-  margin-bottom: 1rem;
+  margin-bottom: .25rem;
+}
+.themsList li a {
+  padding: .75rem;
+  color: var(--text-third-color);
 }
 .themsList .logoThem {
   filter: grayscale(1);
 }
+.themsList li a:hover {
+  color: var(--main-doc-color);
+}
 .themsList a:hover .logoThem {
   filter: grayscale(0);
 }
+.account {
+  border-radius: .5rem;
+  border: 1px solid var(--bg-main2-color);
+  background-color: var(--bg-main1-color);
+  position: relative;
+  top: 0;
+  cursor: pointer;
+}
+.account:hover, .account.Open {
+  top: -3px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.account.Open .accountOuter {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--bg-main2-color);
+}
+.accountIcon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  font-weight: 700;
+  justify-content: center;
+}
+.accountIcon:before {
+  content: '\e908';
+  display: block;
+  font-family: 'documentation-ico';
+  font-size: 1.5rem;
+  color: var(--main-doc-color);
+}
+.accountHelp, .accountProfile {
+  font-size: .875rem;
+}
+.accountHelp {
+  margin-bottom: 1.5rem;
+}
+.accountHelp > div, .accountProfile > div {
+  margin-bottom: .75rem;
+}
+.account .servClient:before, .account .contactUs:before, .account .faq:before, .account .accountSettings:before, .account .accountSpace:before, .account .accountSignout:before {
+  margin-right: .5rem;
+  font-family: 'documentation-ico';
+  font-size: 1rem;
+}
+.account .servClient:before {
+  content: '\e90c';
+}
+.account .contactUs:before {
+  content: '\e90b';
+}
+.account .faq:before {
+  content: '\e90a';
+}
+.account .accountSettings:before {
+  content: '\e90d';
+}
+.account .accountSpace:before {
+  content: '\e909';
+}
+.account .accountSignout:before {
+  content: '\e90e';
+}
+
+/* ## Page Them */
+.currentThem {
+  margin-bottom: 1rem;
+  padding: .75rem .75rem .75rem 0;
+  border-right: .125rem solid var(--main-doc-color);
+}
+.currentThem .heading-4 {
+  margin: 0;
+}
+.navChap {
+  padding-left: .75rem;
+}
+.navChap ul {
+  padding-left: 1rem;
+  border-left: 1px solid var(--bg-main2-color);
+}
+.navChap ul a {
+  display: block;
+  padding: .75rem 0;
+  color: var(--text-third-color);
+}
+
+/* ## Appmain */
+.home h2, .documentation h2 {
+  margin-bottom: .875rem;
+  padding-left: 1rem;
+}
+.refInternet {
+  color: var(--main-doc-color);
+}
+.themInfo {
+  min-height: 190px;
+  position: relative;
+  top: 0;
+}
+.themInfo:hover {
+  top: -3px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
 
 /* # Responsive */
-@media only screen and (max-width: 992px) {
-
+/* ## Mobile Menu */
+.mobileMenu {
+  display: none;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bg-main1-color);
+  border-top: 1px solid var(--bg-main2-color);
 }
+.mobileMenu ul {
+  justify-content: space-evenly;
+  padding: .5rem 0;
+}
+.mobileMenu li a {
+  font-size: .625rem;
+  flex-direction: column;
+}
+.moblieMenu li:last-child a  {
+  margin-right: 0;
+}
+.mobileMenu li a:before {
+  margin-bottom: .25rem;
+  font-family: 'documentation-ico';
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+li.menuSearch a:before {
+  content: '\e904';
+}
+li.menuSummary a:before {
+  content: '\e907';
+}
+li.menuAccount a:before {
+  content: '\e908';
+}
+
 @media only screen and (max-width: 1199px) {
+  .sidebarHeader {
+    width: 13.375rem;
+  }
+  .mainNav {
+    padding-left: 1.5rem;
+  }
+  .sidebar {
+    width: 7.75rem;
+    padding: 0;
+    background-color: var(--bg-main1-color);
+    border-right: 1px solid var(--bg-main2-color);
+  }
+  .sidebarMenu {
+    display: none;
+  }
+  .summaryButton {
+    display: flex;
+    margin: auto 0;
+  }
+  .account {
+    margin: 0 1rem 2rem;
+  }
+  .account.Close .accountMail {
+    display: none;
+  }
+  .account.Open {
+    width: 19.5rem;
+  }
+  .account.Open .accountMail {
+    display: block;
+  }
+  .appMain {
+    margin-left: 7.75rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .searchBox {
+    max-width: 240px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mainNav, .searchBox, .sidebar {
+    display: none;
+  }
+  .sidebarHeader {
+    width: auto;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+  .appMain {
+    margin-left: 0;
+  }
+  .mobileMenu {
+    display: block;
+  }
+  .mainInner.row {
+    padding: 3rem .5rem;
+  }
+}
+@media only screen and (max-width: 576px) {
 
 }
 
 /* Animation / Transitions */
+.themInfo, .account {
+  transition: all ease .4s;
+}
+.sidebarHeader, .sidebar {
+  transition: width ease .4s;
+}
+.appMain {
+  transition: margin ease .4s;
+}

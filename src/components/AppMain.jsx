@@ -2,9 +2,9 @@ import React from 'react'
 
 const AppMain = (props) => {
     return (
-        <div className="appMain">
+        <div className={"appMain " + props.className}>
             <div className="mainInner row">
-                <main className="mainContent col-xxl-10">
+                <main className={props.className === "home" ? "mainContent col-xxl-9 " : "mainContent col-xxl-8"}>
                     {props.children}
                 </main>
             </div>

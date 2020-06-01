@@ -8,7 +8,7 @@ const ModeleBlock = () => {
         <div className="indexMod col-xl-6">
             <div className="modTitle flex-items-center">
                 <h2>Index des modèles</h2>
-                <button><Link to="/modeles">Voir tout</Link></button>
+                <button className="seeAll"><Link to="/modeles">Voir tout</Link></button>
             </div>
             <div className="borderBlock">
                 <UCList list={Modele}/>

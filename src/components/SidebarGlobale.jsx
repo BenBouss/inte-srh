@@ -12,6 +12,9 @@ class SidebarNv0 extends Component {
                         <ThemsList />
                     </nav>
                 </div>
+                <div className="summaryButton">
+                    <div>Sommaire</div>
+                </div>
                 <Account />
             </div>
         );

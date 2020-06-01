@@ -4,6 +4,7 @@ import SidebarThem from '../components/SidebarThem'
 import AppMain from '../components/AppMain'
 import DynamicScrollToTop from '../components/DynamicScrollToTop';
 import Sommaire from '../data/sommaire.json'
+import UCList from '../components/UCList'
 
 const ThemPage = ({ match }) => {
     const {
@@ -12,14 +13,14 @@ const ThemPage = ({ match }) => {
     const them = Sommaire.find(({ Path }) => Path === themPath );
     
     return (
-        <div className="documentation theme">
+        <div>
             <Header />
             <SidebarThem them={them}/>
-            <AppMain them={them}>
+            <AppMain className={"documentation"} them={them}>
                 <DynamicScrollToTop />
                 <div className="row">
                     <div className="col-xs-12">
-                        <div className="heading-1 whiteBlock">
+                        <div className="heading-1">
                             <h1>{them.Thematique}</h1>
                         </div>
                     </div>
@@ -28,19 +29,8 @@ const ThemPage = ({ match }) => {
                 <div className="row" key={i}>
                     <div className="col-xs-12">
                         <h2>{chap.ChapTitre}</h2>
-                        <div className="whiteBlock">
-                            <ul>
-                                {chap.UC.map((UCList, i) =>
-                                <li key={i} className="itemUC">
-                                    <div className="itemUCOuter">
-                                        <div className="itemUCInner">
-                                            <div className="titleUC">{UCList.UCTitre}</div>
-                                            <div className="refInternet">{UCList.UCRef}</div>
-                                        </div>
-                                    </div>
-                                </li>
-                                )}
-                            </ul>
+                        <div className="borderBlock">
+                            <UCList list={chap.UC}/>
                         </div>
                     </div>
                 </div>

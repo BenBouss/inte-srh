@@ -3,16 +3,18 @@ import React from 'react'
 import Header from '../components/Header'
 import SidebarGlobale from '../components/SidebarGlobale'
 import AppMain from '../components/AppMain'
-import ThemesBlock from '../components/ThemesBlock'
+import ThemsBlock from '../components/ThemsBlock'
 import MajBlock from '../components/MajBlock'
 import ModeleBlock from '../components/ModeleBlock'
+
+import MobileMenu from '../components/MobileMenu'
 
 const Homepage = () => {
     return (
         <div>
             <Header />
             <SidebarGlobale />
-            <AppMain>
+            <AppMain className={"home"}>
                 <div className="row">
                     <div className="col-xs-12">
                         <div>
@@ -25,8 +27,9 @@ const Homepage = () => {
                     <MajBlock />
                     <ModeleBlock />
                 </div>
-                <ThemesBlock />
+                <ThemsBlock />
             </AppMain>
+            <MobileMenu />
         </div>
     );
 }
