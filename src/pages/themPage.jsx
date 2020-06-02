@@ -17,12 +17,9 @@ const ThemPage = ({ match }) => {
             <Header />
             <SidebarThem them={them}/>
             <AppMain className={"documentation"} them={them}>
-                <DynamicScrollToTop />
                 <div className="row">
                     <div className="col-xs-12">
-                        <div className="heading-1">
-                            <h1>{them.Thematique}</h1>
-                        </div>
+                        <h1>{them.Thematique}</h1>
                     </div>
                 </div>
                 {them.Chapitre.map((chap, i) =>
@@ -36,6 +33,7 @@ const ThemPage = ({ match }) => {
                 </div>
                 )}
             </AppMain>
+            <DynamicScrollToTop />
         </div>
     );
 }
