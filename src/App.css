@@ -326,6 +326,24 @@ a.active {
   border-bottom: 1px solid var(--bg-main2-color);
   background-color: var(--bg-main1-color);
 }
+.backButton {
+  margin-right: 1rem;
+}
+.backButton a:before {
+  content: '\e90f';
+  display: flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-family: 'documentation-ico';
+  color: var(--text-third-color);
+}
+.backButton a:hover:before {
+  background-color: var(--bg-main2-color);
+  font-weight: 700;
+}
 .appType {
   border-radius: .375rem;
   background-color: var(--bg-main2-color);
@@ -355,9 +373,6 @@ a.active {
   border: 1px solid var(--bg-main2-color);
   background-color: var(--bg-main2-color);
 }
-/* .searchBox form input:focus {
-  background-color: var(--bg-main1-color);
-} */
 .searchBox form input::placeholder {
   color: var(--text-third-color);
 }
